@@ -1,4 +1,5 @@
 function Test(){
+	<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 	var GoogleAuth; // Google Auth object.
 	init();
 	var xhttp = new XMLHttpRequest();
