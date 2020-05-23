@@ -1,0 +1,11 @@
+Coding
+1. Marker dynamisch aus Account lesen
+2. Marker als Array definieren
+3. Flüge als Array definieren
+
+
+Design 
+1. Startseite definieren?
+
+
+

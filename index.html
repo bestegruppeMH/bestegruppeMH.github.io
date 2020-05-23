@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<?php header('Access-Control-Allow-Origin: *'); ?>
+
+<?php header('Access-Control-Allow-Origin: null'); ?>
+
+<script type='text/javascript' src="js/button_test.js"></script>
+<script type='text/javascript' src="js/flights_test.js"></script>
+<script type='text/javascript' src="js/map_test.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="js/jquery.csv.js"></script>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>WIT523 - Map my flights </title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 90%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+  <body>
+
+	<p> Markus testet mal ein bisschen... </p>
+
+	<p> Moni hat eine funktionierende Karte eingebaut... </p>
+
+	<button onclick="ButtonPressed()"> Soll eigentlich bookmarks holen...</button>
+	<button onclick="Test()"> Erfolgreicher XML Aufruf https://www.w3schools.com/xml/cd_catalog.xml </button>
+	
+
+	<p>Flughäfen eingeben:</p>
+
+  <input type="text" id="startAirport" value="Start Flughafen">
+  <input type="text" id="destAirport" value="Ziel Flughafen">
+
+  <p>Klicken um die Fluglinie einzuzeichnen</p>
+
+  <button onclick="Fluglinie()">Zeichnen</button>
+
+  <p id="done"></p>
+
+	<div id="map"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt-uOfgDQqsKfMHZV9ohOjaJB6tbJvnHc&libraries=geometry&callback=initMap"
+    async defer></script>
+  </body>
+</html>
