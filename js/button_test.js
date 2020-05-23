@@ -43,7 +43,7 @@ function ButtonPressed(){
 	};
 	
 	//initClient();
-	init();
+	//init();
 	GoogleAuth.signIn();
 	
 	//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
