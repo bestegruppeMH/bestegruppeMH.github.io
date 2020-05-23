@@ -11,6 +11,21 @@ function Test(){
 	xhttp.send();
 }
 
+var GoogleAuth; // Google Auth object.
+function initClient() {
+  gapi.client.init({
+      'apiKey': 'AIzaSyCiexyDT-5r4kVo7G9oFhNeW95LGFpIPDw',
+      'clientId': '458950126622-170a7i9aqsmhp31r6l1r0ffnibua2qp1.apps.googleusercontent.com',
+      'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
+      'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
+  }).then(function () {
+      GoogleAuth = gapi.auth2.getAuthInstance();
+
+      // Listen for sign-in state changes.
+      GoogleAuth.isSignedIn.listen(updateSigninStatus);
+  });
+}
+
 function ButtonPressed(){
 	
 	var xhttp = new XMLHttpRequest();
@@ -19,6 +34,9 @@ function ButtonPressed(){
 			readXML(this);
 		}
 	};
+	
+	initClient();
+	GoogleAuth.signIn();
 	
 	//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
 	xhttp.open("GET", "http://www.google.com/bookmarks/?output=xml", true);
