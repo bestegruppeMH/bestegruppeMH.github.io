@@ -14,7 +14,7 @@ function Test(){
 	xhttp.send();
 }
 function init() {
-  gapi.load('auth2', function() {
+  gapi.load('auth2', initClient() {
     /* Ready. Make a call to gapi.auth2.init or some other API */
   });
 }
@@ -42,7 +42,8 @@ function ButtonPressed(){
 		}
 	};
 	
-	initClient();
+	//initClient();
+	init();
 	GoogleAuth.signIn();
 	
 	//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
