@@ -1,4 +1,6 @@
 function Test(){
+	var GoogleAuth; // Google Auth object.
+	init();
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
@@ -10,8 +12,12 @@ function Test(){
 	//xhttp.open("GET", "http://www.google.com/bookmarks/?output=xml", true);
 	xhttp.send();
 }
+function init() {
+  gapi.load('auth2', function() {
+    /* Ready. Make a call to gapi.auth2.init or some other API */
+  });
+}
 
-var GoogleAuth; // Google Auth object.
 function initClient() {
   gapi.client.init({
       'apiKey': 'AIzaSyCiexyDT-5r4kVo7G9oFhNeW95LGFpIPDw',
