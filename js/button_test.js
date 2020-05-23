@@ -43,7 +43,7 @@ function ButtonPressed(){
 		}
 	};
 	
-	//initClient();
+	initClient();
 	//init();
 	GoogleAuth.signIn();
 	
