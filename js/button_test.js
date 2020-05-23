@@ -34,7 +34,8 @@ function initClient() {
 }
 
 function ButtonPressed(){
-	
+	var GoogleAuth; // Google Auth object.
+	init();
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
