@@ -169,8 +169,12 @@
 		var i;
 		var xmlDoc = xml.responseXML;
 		var x = xmlDoc.getElementsByTagName("CD");
-		for(i = 0; i<2; i++) {
-			alert	(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+		if(x.length > 0) {
+			for(i = 0; i<2; i++) {
+				alert	(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+			}
+		else {
+			alert('xmlDoc.length');		
 		}
 	}
 	  ////
