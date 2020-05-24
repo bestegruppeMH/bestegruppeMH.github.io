@@ -122,12 +122,54 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          makeApiCall();
+          ////
+		  //
+		  //
+		  //
+		  //makeApiCall();
+		  //
+		  //
+		  ////
+		  getPOI();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
         }
       }
+	  
+	  ////
+	  ////
+	  function getPOI() {
+		  //var GoogleAuth; // Google Auth object.
+		  //init();
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				readXML(this);
+			}
+		  };
+	  
+	
+		//initClient();
+		//init();
+		//GoogleAuth.signIn();
+		
+		//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
+		xhttp.open("GET", "http://www.google.com/bookmarks/?output=xml", true);
+		xhttp.send();
+	}
+	function readXML(xml) {
+		alert('readXML wurde aufgerufen');
+		var i;
+		var xmlDoc = xml.responseXML;
+		var x = xmlDoc.getElementsByTagName("CD");
+		for(i = 0; i<2; i++) {
+			alert	(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+		}
+	}
+	  ////
+	  ////
+	  
 
       function handleAuthClick(event) {
         gapi.auth2.getAuthInstance().signIn();
