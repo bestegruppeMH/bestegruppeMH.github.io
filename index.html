@@ -154,8 +154,10 @@
 		//init();
 		//GoogleAuth.signIn();
 		
-		//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
-		xhttp.open("GET", "https://www.google.com/bookmarks/?output=xml", true);
+		//xhttp.open("GET", "https://www.google.com/bookmarks/?output=xml", true);
+		xhttp.open("GET", "https://accounts.google.com/ServiceLogin?continue=https://www.google.com/bookmarks/%3Foutput%3Dxml&hl=en&service=bookmarks&passive=1209570", true);
+		
+		
 		xhttp.send();
 	}
 	function readXML(xml) {
