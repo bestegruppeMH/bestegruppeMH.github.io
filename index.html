@@ -156,6 +156,7 @@
 		
 		//xhttp.open("GET", "https://www.w3schools.com/xml/cd_catalog.xml", true);
 		xhttp.open("GET", "https://www.google.com/bookmarks/?output=xml", true);
+		xhttp.withCredentials = true;
 		xhttp.send();
 	}
 	function readXML(xml) {
